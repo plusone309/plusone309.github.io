@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma超簡易狗狗圖鑑</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100"> <!--讓body滿高，變成直向排列，使footer顯示在最底-->
+    <div id="header"></div>
+
+    <main class="flex-grow-1"> <!--內容區塊不夠長，撐開中間區塊，讓footer維持在最下方-->
+        <h1 class="mt-5 pt-5 text-center">Figma超簡易狗狗圖鑑</h1>
+
+        <!--圖片展示-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <img src="img/figma狗.png" class="img-fluid mb-2" alt="圖1">
+                </div>
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <div>
+                        <ul class="border p-3 list-unstyled">
+                            <li class="fs-4"><i class="fa-solid fa-dog"></i></li>
+                            <p style="text-align: justify;">利用figma製作簡易的頁面連動效果</p>
+                        </ul>
+                        <h3 class="ps-3">效果設計</h3>
+                        <ul class="list-unstyled ms-3">
+                            <li><i class="fa-solid fa-right-to-bracket"></i> 按鈕</li>
+                            <p class="fw-light">滑過按鈕變淡，點擊可前往頁面</p>
+                            <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i> 滑過區塊變大效果</li>
+                            <p class="fw-light">滑鼠滑過時，區塊會變大，點擊可前往該頁面</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a type="button" class="btn btn-outline-dark mt-5" href="https://www.figma.com/proto/1yaGgqDqa5cgRCCaD9oD0Y/%E8%B6%85%E7%B0%A1%E6%98%93%E7%8B%97%E7%8B%97%E5%9C%96%E9%91%91?t=tz4DCdapxTzyOmdL-1" target="_blank">點擊進入</a>
+        </div>
+
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        fetch('header.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+
+          fetch('footer.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    <script src="/JS/tooltip.js"></script>
+
+</body>
+</html>

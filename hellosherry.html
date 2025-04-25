@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloSherry網站介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100"> <!--讓body滿高，變成直向排列，使footer顯示在最底-->
+    <div id="header"></div>
+
+    <main class="flex-grow-1"> <!--內容區塊不夠長，撐開中間區塊，讓footer維持在最下方-->
+        <h1 class="mt-5 pt-5 text-center">HelloSherry網站介紹</h1>
+
+        <!--圖片展示-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <img src="img/hellosherry01.png" class="img-fluid mb-2" alt="圖1">
+                    <img src="img/hellosherry02.png" class="img-fluid mb-2" alt="圖2">
+                </div>
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <div>
+                        <ul class="border p-3 list-unstyled">
+                            <li class="fs-4"><i class="fa-solid fa-lightbulb"></i> 網站發想：</li>
+                            <p style="text-align: justify;">朋友開的韓式皮膚管理工作室，目前只有經營instagram，試著用wordpress幫他做一個相關網站</p>
+                            <li class="fs-4"><i class="fa-regular fa-lightbulb"></i> 店名HelloSherry發想：</li>
+                            <li><strong>Sherry：</strong>老闆的名字</li>
+                            <li><strong>HelloSherry：</strong></li>
+                        </ul>
+                        <h3 class="ps-3">網站內容</h3>
+                        <ul class="list-unstyled ms-3">
+                            <li><i class="fa-solid fa-house"></i> 首頁</li>
+                            <p class="fw-light">首頁大圖加文字，讓消費者明確知道網站主題</p>
+                            <li><i class="fa-solid fa-bookmark"></i> 關於</li>
+                            <p class="fw-light">介紹韓式皮膚管理及工作室特色</p>
+                            <li><i class="fa-solid fa-hand-holding-heart"></i> 服務項目</li>
+                            <p class="fw-light">介紹服務內容</p>
+                            <li><i class="fa-solid fa-comment-dollar"></i> 優惠活動</li>
+                            <p class="fw-light">包含課程折扣優惠、好禮送及產品優惠</p>
+                            <li><i class="fa-solid fa-images"></i> B/A圖</li>
+                            <p class="fw-light">施作前後對比圖，讓消費者清楚看見成效</p>
+                            <li><i class="fa-solid fa-circle-question"></i> 常見問題</li>
+                            <p class="fw-light">與皮膚保養相關分享</p>
+                            <li><i class="fa-solid fa-cart-shopping"></i> 商店</li>
+                            <p class="fw-light">包含所有產品及優惠組合產品</p>
+                            <li><i class="fa-solid fa-address-card"></i> 聯絡資訊</li>
+                            <p class="fw-light">包含聯絡資訊、地點及社交媒體</p>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a type="button" class="btn btn-outline-dark mt-5" href="https://plusone.idv.tw/hellosherryhome/" target="_blank">進入網站看更多內容</a>
+        </div>
+
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        fetch('header.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+
+          fetch('footer.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    <script src="/JS/tooltip.js"></script>
+
+</body>
+</html>

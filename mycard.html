@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名片介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100"> <!--讓body滿高，變成直向排列，使footer顯示在最底-->
+    <div id="header"></div>
+
+    <main class="flex-grow-1"> <!--內容區塊不夠長，撐開中間區塊，讓footer維持在最下方-->
+        <h1 class="mt-5 pt-5 text-center">個人名片</h1>
+
+        <!--圖片展示-->
+        <div class="container mt-5">
+            <div class="row g-3">
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 450px;">
+                    <img src="img/名片正.png" class="img-fluid" alt="圖1">
+                    <img src="img/名片反.png" class="img-fluid" alt="圖2">
+                </div>
+                <div class="col-12 col-lg-6" style="max-height: 450px;">
+                    <div>
+                        <ul class="border p-3 list-unstyled">
+                            <li class="fs-4"><i class="fa-solid fa-circle-question"></i></li>
+                            <p><strong>顏色</strong><br>綠色搭配澤龜</p>
+                            <p><strong>波浪</strong><br>澤龜生活在池塘裡</p>
+                            <p><strong>波浪</strong><br>澤龜生活在池塘裡</p>
+                            <p><strong>文字</strong><br>新增手寫的感覺</p>
+                            <p><strong>QRCODE</strong><br>掃描可瞭解更多資訊（目前無法掃描）</p>
+                        </ul>
+                        <ul class="list-unstyled ms-3">
+                            <li><i class="fa-solid fa-paintbrush"></i></li>
+                            <p class="fw-light">利用illustrator製作</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        fetch('header.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+
+          fetch('footer.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    <script src="/JS/tooltip.js"></script>
+
+</body>
+</html>

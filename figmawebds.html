@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma網頁版型設計介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100"> <!--讓body滿高，變成直向排列，使footer顯示在最底-->
+    <div id="header"></div>
+
+    <main class="flex-grow-1"> <!--內容區塊不夠長，撐開中間區塊，讓footer維持在最下方-->
+        <h1 class="mt-5 pt-5 text-center">Figma網頁版型設計</h1>
+
+        <!--圖片展示-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <img src="img/figma版型1.png" class="img-fluid" alt="圖1">
+                    <img src="img/figma版型2.png" class="img-fluid" alt="圖2">
+                    <img src="img/figma版型3.png" class="img-fluid" alt="圖3">
+                </div>
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <div>
+                        <ul class="border p-3 list-unstyled">
+                            <li class="fs-4"><i class="fa-solid fa-file-invoice"></i></li>
+                            <p style="text-align: justify;">製作網頁前先利用figma製作的網頁版型草稿</p>
+                        </ul>
+                        <h3 class="ps-3">內容設計</h3>
+                        <ul class="list-unstyled ms-3">
+                            <li><i class="fa-solid fa-house"></i> 首頁</li>
+                            <p class="fw-light">包含大圖及簡短文字說明區塊</p>
+                            <li><i class="fa-solid fa-bookmark"></i> 關於</li>
+                            <p class="fw-light">介紹服務的內容，有圖片區塊及文字說明</p>
+                            <li><i class="fa-solid fa-film"></i> 影片專區</li>
+                            <p class="fw-light">可以放相關影片</p>
+                            <li><i class="fa-solid fa-newspaper"></i> 文章分享</li>
+                            <p class="fw-light">與服務有關的文章區塊</p>
+                            <li><i class="fa-solid fa-address-card"></i> 聯絡資訊</li>
+                            <p class="fw-light">新增QRCODE可以直接掃描</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a type="button" class="btn btn-outline-dark mt-5" href="https://www.figma.com/proto/wjZsamYZFVQkXUIBkcZ6Yc/final-project%E6%A1%86%E6%9E%B6?node-id=0-1&t=tz4DCdapxTzyOmdL-1" target="_blank">點擊進入</a>
+        </div>
+
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        fetch('header.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+
+          fetch('footer.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    <script src="/JS/tooltip.js"></script>
+
+</body>
+</html>

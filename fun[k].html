@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun[k]網站介紹</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100"> <!--讓body滿高，變成直向排列，使footer顯示在最底-->
+    <div id="header"></div>
+
+    <main class="flex-grow-1"> <!--內容區塊不夠長，撐開中間區塊，讓footer維持在最下方-->
+        <h1 class="mt-5 pt-5 text-center">Fun[k]網站介紹</h1>
+
+        <!--圖片展示-->
+        <div class="container mt-5">
+            <div class="row g-3">
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <img src="img/fun[k]展示1.png" class="img-fluid mb-2" alt="圖1">
+                    <img src="img/fun[k]展示2.png" class="img-fluid mb-2" alt="圖2">
+                    <img src="img/fun[k]展示3.png" class="img-fluid mb-2" alt="圖3">
+                    <img src="img/fun[k]展示4.png" class="img-fluid mb-2" alt="圖4">
+                    <img src="img/fun[k]展示5.png" class="img-fluid mb-2" alt="圖5">
+                </div>
+                <div class="col-12 col-lg-6 overflow-auto" style="max-height: 350px;">
+                    <div>
+                        <ul class="border p-3 list-unstyled">
+                            <li class="fs-4"><i class="fa-solid fa-lightbulb"></i> 網站發想：</li>
+                            <p style="text-align: justify;">本身為幼兒體操老師，想像自己未來開一間體操教室，以此為發想，製作了一個體操教室的網站。</p>
+                            <li class="fs-4"><i class="fa-regular fa-lightbulb"></i> 店名Fun[k]發想：</li>
+                            <li><strong>Fun：</strong>希望來的小朋友都可以玩得開心</li>
+                            <li><strong>[k]：</strong>為KK音標</li>
+                            <li>合在一起讀音就像「放課」，解讀為下課後來的才藝班</li>
+                        </ul>
+                        <h3 class="ps-3">網站內容</h3>
+                        <ul class="list-unstyled ms-3">
+                            <li><i class="fa-solid fa-house"></i> 首頁</li>
+                            <p class="fw-light">首頁簡單介紹幼兒體操，包含體操教室特色</p>
+                            <li><i class="fa-solid fa-scroll"></i> 課程</li>
+                            <p class="fw-light">包含器材項目介紹、課程項目及年齡分班</p>
+                            <li><i class="fa-solid fa-film"></i> 影片專區</li>
+                            <p class="fw-light">課程影片及簡短介紹</p>
+                            <li><i class="fa-solid fa-newspaper"></i> 文章</li>
+                            <p class="fw-light">與兒童相關的文章分享</p>
+                            <li><i class="fa-solid fa-address-card"></i> 聯絡資訊</li>
+                            <p class="fw-light">包含聯絡資訊、地址及社群媒體</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a type="button" class="btn btn-outline-dark mt-5" href="https://plusone.idv.tw/mysite/" target="_blank">進入網站</a>
+        </div>
+
+    </main>
+
+
+
+    <div id="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        fetch('header.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('header').innerHTML = data;
+          });
+
+          fetch('footer.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+          });
+    </script>
+    <script src="/JS/tooltip.js"></script>
+
+</body>
+</html>
